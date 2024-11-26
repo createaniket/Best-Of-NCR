@@ -1,0 +1,7 @@
+.card_with_images_card_items{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
