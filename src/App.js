@@ -4,10 +4,13 @@ import Home from './components/Homepage/Home';
 function App() {
 
   const handleLoginSuccess = (credentialResponse) => {
+    alert("Login Successful")
     console.log("Login Success:", credentialResponse);
   };
 
   const handleLoginFailure = () => {
+
+    alert("Login failed")
     console.log("Login Failed");
   };
 
