@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
-import FacebookLogin from "react-facebook-login";
+// import FacebookLogin from "react-facebook-login";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -45,16 +45,16 @@ const Login = () => {
     console.log("Login Failed");
   };
 
-  const responseFacebook = (response) => {
-    console.log("Facebook response:", response);
-    if (response.accessToken) {
-      // Handle successful login
-      console.log("User info:", response.name, response.email);
-    } else {
-      // Handle login failure
-      console.error("Facebook login failed.");
-    }
-  };
+  // const responseFacebook = (response) => {
+  //   console.log("Facebook response:", response);
+  //   if (response.accessToken) {
+  //     // Handle successful login
+  //     console.log("User info:", response.name, response.email);
+  //   } else {
+  //     // Handle login failure
+  //     console.error("Facebook login failed.");
+  //   }
+  // };
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -212,13 +212,13 @@ const Login = () => {
                   <div className="signup-link">
                     {formType === "login" ? (
                       <>
-                        <FacebookLogin
+                        {/* <FacebookLogin
                           appId="2152207445229096" // Replace with your App ID
                           autoLoad={false}
                           fields="name,email,picture"
                           callback={responseFacebook}
                           icon="fa-facebook"
-                        />
+                        /> */}
 
                         <GoogleLogin
                           onSuccess={handleLoginSuccess}
@@ -227,13 +227,13 @@ const Login = () => {
                       </>
                     ) : (
                       <>
-                        <FacebookLogin
+                        {/* <FacebookLogin
                           appId="2152207445229096" // Replace with your App ID
                           autoLoad={false}
                           fields="name,email,picture"
                           callback={responseFacebook}
                           icon="fa-facebook"
-                        />
+                        /> */}
 
                         <GoogleLogin
                           onSuccess={handleLoginSuccess}
