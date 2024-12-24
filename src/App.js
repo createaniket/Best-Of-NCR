@@ -1,18 +1,11 @@
-import { GoogleLogin } from "@react-oauth/google";
+
 import Home from "./components/Homepage/Home";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Privacypolicy from "./components/PrivacyPolicy/Privacypolicy";
+import Login from "./components/Login/Login";
 
 function App() {
-  const handleLoginSuccess = (credentialResponse) => {
-    alert("Login Successful");
-    console.log("Login Success:", credentialResponse);
-  };
 
-  const handleLoginFailure = () => {
-    alert("Login failed");
-    console.log("Login Failed");
-  };
 
   return (
     <div className="App">
@@ -20,15 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route
-            path="/login"
-            element={
-              <GoogleLogin
-                onSuccess={handleLoginSuccess}
-                onError={handleLoginFailure}
-              />
-            }
-          />
+          <Route path="/login" element={  <Login />   } />
 
           <Route path="/privacy-policy" element={<Privacypolicy />} />
         </Routes>
