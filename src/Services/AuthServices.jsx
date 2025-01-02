@@ -27,20 +27,6 @@ const logout = async (token) => {
     }
 };
 
-const SettingCustomExpiry = async (expirationDays, token) => {
-    try {
-        const response = await axios.post(`${API_URL}/update-token-custom-expiry`, 
-        { expirationDays }, 
-        {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        });
-        return response.data;
-    } catch (error) {
-        console.error("Error updating token with custom expiry:", error);
-        throw error;
-    }
-};
 
-export { signup, login, logout, SettingCustomExpiry };
+
+export { signup, login, logout };

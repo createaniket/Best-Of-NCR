@@ -1,0 +1,114 @@
+.shop_details_sect {
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.46);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.img-display {
+  overflow: hidden;
+}
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.img-showcase img {
+  min-width: 100%;
+}
+.img-select {
+  display: flex;
+}
+.img-item {
+  margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
+  margin-right: 0;
+}
+.img-item:hover {
+  opacity: 0.8;
+}
+
+.shop_detail_content {
+  width: 45%;
+
+  /* border: 2px solid green; */
+  margin: 00 auto;
+}
+
+.shop_services {
+  display: flex;
+  align-items: center;
+}
+
+.shop_service {
+  background: #e3e2e2;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.shop_detail_name {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 10px 00;
+}
+
+.shop_phone {
+  background-color: #048a06;
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0;
+  width: min-content;
+  align-items: center;
+}
+
+.shop_votes {
+  display: flex;
+  align-items: center;
+}
+
+.shop_vote_hd {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.votecount {
+  font-weight: 400;
+
+  color: #424242;
+  padding: 00 5px;
+}
+.upvote_icn {
+  color: #048a06;
+  padding: 00 5px;
+}
+
+.upvote_icn_down {
+  color: red;
+  padding: 00 5px;
+}
+@media screen and (min-width: 992px) {
+  .card_shop {
+    display: flex;
+  }
+
+  .product-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+}

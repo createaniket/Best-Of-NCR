@@ -18,9 +18,7 @@ const Login = () => {
     console.log("im here")
     alert("Login Successful");
     console.log("Login Success:", credentialResponse.credential);
-
     handleGoogleLogin(credentialResponse.credential);
-   
   };
 
   const handleGoogleLogin = async (credential) => {
@@ -78,6 +76,8 @@ const Login = () => {
     try {
       const data = await signup(name, email, password);
       localStorage.setItem("token", data.token);
+      localStorage.setItem("userid", data._id);
+
       localStorage.setItem("expiresIn", data.expiresIn);
       toast.success("Signup successful"); // Show success toast
       navigate("/");
