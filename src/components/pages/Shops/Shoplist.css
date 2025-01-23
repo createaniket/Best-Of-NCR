@@ -1,0 +1,103 @@
+
+
+.shoplist_container_items{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+.shoplist_sect{
+
+    width: 75%;
+}
+.shop_list_conatiner_item{
+    display: flex;
+width: 98%;
+background-color: #fff;
+margin: 00 00 20px 00;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
+.shoplist_container_img{
+    max-width: 250px;
+    padding: 20px;
+}
+
+.shoplist_info_sect{
+
+    padding: 20px;
+
+}
+
+.shoplist_container_txt{
+
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+}
+.shoplist_votes{
+
+    margin: 0;
+}
+
+.shoplist_location{
+    margin: 10px 00;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+    color: #727272;
+}
+
+.shoplist_tags{
+
+    margin: 5px 00; 
+}
+
+
+
+.shoplist_tags span{
+    background-color: #f7f7f7;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+    font-size: 14px;
+}
+
+.locationicons{
+
+    color: green;
+    margin: 00 5px 00 00;
+}
+
+.shoplist_phonenumber{
+
+    display: flex;
+    align-items: center;
+    margin: 15px 00;
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+    background-color: green;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.shop_phone_icon{
+
+    color: #fff;
+    margin: 00 5px 00 00;
+}
+
+
+.shoplist_ads_sect{
+
+    width: 25%;
+}

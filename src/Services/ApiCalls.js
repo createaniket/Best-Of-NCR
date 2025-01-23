@@ -26,6 +26,7 @@ const FetchAllShops = async() => {
 
 
 
+
 const CastVoteForShop = async (id) => {
     console.log("iam hstetehe cast vote react", id)
     try {

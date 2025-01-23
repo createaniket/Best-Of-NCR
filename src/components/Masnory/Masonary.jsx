@@ -1,43 +1,23 @@
 import * as React from "react";
 import Masonry from "@mui/lab/Masonry";
+import { useNavigate } from "react-router-dom";
 
-const itemData = [
-  {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f",
-    title: "Snacks",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-    title: "Mushrooms",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383",
-    title: "Tower",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    title: "Sea star",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-  },
-];
+const Masonary = (props) => {
+  const navigate = useNavigate();
+  const Cats = props.cats.slice(0, 8);
 
-const Masonary = () => {
+  console.log("The Cats", Cats);
+
   return (
     <div>
       <p className="masonary_home_head">Featured Categories</p>
       <Masonry columns={{ xs: 3, sm: 4 }} spacing={{ xs: 0.7, sm: 1, md: 2 }}>
-        {itemData.map((item, index) => (
+        {Cats.map((item, index) => (
           <div key={index}>
+
             <img
-              src={item.img}
-              alt={item.title}
+              src={item.image}
+              alt={item.name}
               loading="lazy"
               style={{
                 borderBottomLeftRadius: 4,
@@ -45,6 +25,7 @@ const Masonary = () => {
                 // display: 'block',
                 width: "100%",
               }}
+              onClick={() => {navigate(`/services/${item._id}`)}}
             />
           </div>
         ))}
